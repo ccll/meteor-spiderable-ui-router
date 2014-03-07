@@ -1,0 +1,12 @@
+{
+    "name": "spiderable-ui-router",
+    "description": "Makes the angular ui-router application crawlable to web spiders",
+    "homepage": "https://github.com/ccll/meteor-spiderable-ui-router",
+    "author": "ccll_cailei <cailei@live.com>",
+    "git": "https://github.com/ccll/meteor-spiderable-ui-router.git",
+    "version": "0.1.0",
+    "packages": {
+        "ngMeteor": {},
+        "angular-ui-router": {}
+    }
+}
