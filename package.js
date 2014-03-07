@@ -5,6 +5,8 @@ Package.describe({
 Package.on_use(function (api) {
   api.use('webapp', 'server');
   api.use(['templating'], 'client');
+  api.use('ngMeteor', 'client');
+  api.use('angular-ui-router', 'client');
   api.use(['underscore'], ['client', 'server']);
 
   api.export('Spiderable', ['client', 'server']);

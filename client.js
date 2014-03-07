@@ -1,5 +1,4 @@
 Spiderable = {
-
     makeSpiderable: function(angularApp) {
         var app = null;
         if (typeof(angularApp) === 'string') { // app name
@@ -23,5 +22,11 @@ Spiderable = {
             }
         ]);
     }
-
 };
+
+// Hook into ngMeteor.
+Meteor.startup(function() {
+    if (typeof(ngMeteor) !== 'undefined') {
+        Spiderable.makeSpiderable(ngMeteor);
+    }
+});

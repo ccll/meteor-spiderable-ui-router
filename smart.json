@@ -6,7 +6,6 @@
     "git": "https://github.com/ccll/meteor-spiderable-ui-router.git",
     "version": "0.1.0",
     "packages": {
-        "ngMeteor": {},
         "angular-ui-router": {}
     }
 }
