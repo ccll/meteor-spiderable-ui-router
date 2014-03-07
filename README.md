@@ -8,7 +8,8 @@ This is a modified version of builtin package 'spiderable', which add angular-ui
 mrt add spiderable-ui-router
 ```
 
-Then you are good to go, the package will automatically hook into ngMeteor and angular-ui-router.
+Then you are good to go. The package will automatically hook into ngMeteor and angular-ui-router.
+
 If you like to use angular bridges other than ngMeteor, you need to setup the hook manually, which is easy.
 Just add following code to global scope of your client code:
 ```
