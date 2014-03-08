@@ -4,9 +4,8 @@
     "homepage": "https://github.com/ccll/meteor-spiderable-ui-router",
     "author": "ccll_cailei <cailei@live.com>",
     "git": "https://github.com/ccll/meteor-spiderable-ui-router.git",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "packages": {
-        "ngMeteor": {},
         "angular-ui-router": {}
     }
 }

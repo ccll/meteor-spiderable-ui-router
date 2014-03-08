@@ -24,7 +24,7 @@ Spiderable = {
     }
 };
 
-// Hook into ngMeteor.
+// Hook into angular bridges.
 Meteor.startup(function() {
     if (typeof(ngMeteor) !== 'undefined') {
         Spiderable.makeSpiderable(ngMeteor);
