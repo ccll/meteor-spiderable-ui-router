@@ -11,14 +11,24 @@ Spiderable = {
             throw new Error('spiderable-ui-router: invalid angular app');
         }
 
-        app.run(['$rootScope',
-            function ($rootScope) {
-                // Set a global flag when DOM is rendered.
-                $rootScope.$on('$viewContentLoaded',
-                    function(event){
+        app.run(['$rootScope', '$state'
+            function ($rootScope, $state) {
+                var numberOfSubstates = Infinity;
+                var timesViewContentLoadedFired = 0;
+                $rootScope.$on('$stateChangeSuccess', function(event, state) {
+                    numberOfSubstates = state.name.split('.').length + 1;
+                    if (timesViewContentLoadedFired >= numberOfSubstates) {
+                        // Set a global flag when DOM is rendered.
                         window.__ui_router_dom_ready__ = true;
                     }
-                );
+                });
+                $rootScope.$on('$viewContentLoaded', function(event) {
+                    timesViewContentLoadedFired++;
+                    if (timesViewContentLoadedFired >= numberOfSubstates) {
+                        // Set a global flag when DOM is rendered.
+                        window.__ui_router_dom_ready__ = true;
+                    }
+                });
             }
         ]);
     }
